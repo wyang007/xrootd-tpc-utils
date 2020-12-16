@@ -500,9 +500,9 @@ def prepare_environment(config):
     xrootd_settings = get_dict_value(['xrootd-settings'], config)
 
     try:
-        os.environ["X509_USER_KEY"]     = gsi_settings['x509-user-key']
-        os.environ["X509_USER_CERT"]    = gsi_settings['x509-user-cert']
-        os.environ["X509_CERT_DIR"]     = gsi_settings['x509-cert-dir']
+        #os.environ["X509_USER_KEY"]     = gsi_settings['x509-user-key']
+        #os.environ["X509_USER_CERT"]    = gsi_settings['x509-user-cert']
+        #os.environ["X509_CERT_DIR"]     = gsi_settings['x509-cert-dir']
         os.environ["X509_USER_PROXY"]   = gsi_settings['x509-user-proxy']
 
         rc = validate_proxy(gsi_settings)

@@ -395,6 +395,12 @@ class XrdThirdPartyTransfer(Task):
         else:
             tpc = "--tpc only"
 
+        print_message("%s %s %s %s %s"%(self.xrd_cp,
+                                        self.args,
+                                        tpc,
+                                        self.src_url,
+                                        self.dst_url))
+
         return "%s %s %s %s %s"%(self.xrd_cp, 
                                  self.args,
                                  tpc, 
@@ -534,6 +540,14 @@ class XrdRoundTrip(Task):
                 valid_rcs.append(2)
         else:  
             print_error("skipping tpc using %s as source"%self.endpt_id)
+
+        ## remove upload file since some storage elements may not support xrdcp -f
+
+        rmt_url_to_delete = self.urls.get_to_delete()[1]
+        scheme, loc, path, query, frag = urlsplit(rmt_url_to_delete)
+        command = "%s %s rm %s"%(self.xrd_fs, loc, path)
+        #print("Wei: command %s"%command)
+        p = os.popen(command)
 
         ## tpc dst
         '''

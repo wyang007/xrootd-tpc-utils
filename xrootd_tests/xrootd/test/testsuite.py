@@ -208,7 +208,7 @@ class TestSuite(object):
     def configure_multiprocessing(self):
         self.manager = multiprocessing.Manager()
         self.queue = multiprocessing.Queue(100)
-        self.cpu_count = multiprocessing.cpu_count()
+        self.cpu_count = min(1, multiprocessing.cpu_count())
         self.report = self.manager.dict()
         self.report['failure'] = {}
         self.report['success'] = {}
