@@ -78,6 +78,9 @@ from string import *
 from time import strftime,gmtime
 from utils import *
 from tasks import Task
+from urlparse import urlsplit
+import subprocess
+from threading import Timer
 
 SMOKE_FORMAT='{0:<8}{1:<20}{2:<10}{3:^10}{4:^10}{5:^10}{6:^10}{7:^10}'
 MESH_FORMAT='{0:<25}{1:<10} tests run: {2:^10}\n{3:>25}:  success{4:^5} failure{5:^5} ({6:>7})\n{7:>25}:  success{8:^5} failure{9:^5} ({10:>7})\n{11:>25}:  success{12:^5} failure{13:^5} ({14:>7})\n'
@@ -557,11 +560,34 @@ class Report(object):
 
     def _update_scores(self, config_file):
         config = load_json_configuration(config_file)
+        xrd_fs = get_dict_value(['xrootd-settings', 'xrdfs'], config)
         endpoints = get_dict_value(['endpoints'], config)
+        import string
         for e in endpoints:
             ename = get_dict_value(['id'], e)
             (typ, score) = get_dict_value([ename], self.endpointmap)
             e['score'] = score
+
+            url = get_dict_value(['url'], e)
+            scheme, loc, path, query, frag = urlsplit(url)
+            cmd = [xrd_fs, loc, 'query config version']
+
+            kill = lambda process: process.kill()
+            version_query = subprocess.Popen(string.join(cmd),
+                                             stdout=subprocess.PIPE,
+                                             stderr=subprocess.PIPE,
+                                             shell=True)
+            my_timer = Timer(5, kill, [version_query])
+
+            try:
+                my_timer.start()
+                # avoid using in Popen().communication(timtout=5) because we maybe running in python2
+                stdout, stderr = version_query.communicate()  
+                lines = stdout.split('\n')
+                e['version'] = lines[0]
+            finally:
+                my_timer.cancel()
+            
         print_json_to_file(config_file, config)
 
     def _update_smoke(self, endpt_id, task, d):

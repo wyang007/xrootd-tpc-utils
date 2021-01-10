@@ -2,192 +2,192 @@
     "endpoints": [
         {
             "id": "RAL-LCG2", 
-            "score": 15, 
+            "score": 20, 
             "type": "Echo", 
             "url": "root://echo.stfc.ac.uk//dteam:test/", 
-            "version": "?"
+            "version": "v4.11.2"
         }, 
         {
             "id": "RAL-CEPH", 
-            "score": 17, 
+            "score": 19, 
             "type": "CEPH", 
             "url": "root://ceph-test-gw683.gridpp.rl.ac.uk//dteam:test/", 
-            "version": "?"
+            "version": "v20201125-585247d"
         }, 
         {
             "id": "PRAGUE", 
-            "score": 17, 
+            "score": 7, 
             "type": "DPM", 
             "url": "root://golias100.farm.particle.cz:1094//dpm/farm.particle.cz/home/dteam/tpc-test", 
-            "version": "1.12.0"
+            "version": "v5.1.0-rc4"
         }, 
         {
             "id": "UKI-BRUNEL", 
-            "score": 19, 
+            "score": 20, 
             "type": "DPM", 
             "url": "root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/dteam/wlcg-tpc", 
-            "version": "1.10.4"
+            "version": "v4.12.3"
         }, 
         {
             "id": "UKI-MAN1", 
-            "score": 19, 
+            "score": 15, 
             "type": "DPM", 
             "url": "root://vm33.in.tier2.hep.manchester.ac.uk:1094//dpm/tier2.hep.manchester.ac.uk/home/dteam", 
-            "version": "1.12.0"
+            "version": "v5.0.3"
         }, 
         {
             "id": "UKI-MAN2", 
-            "score": 19, 
+            "score": 20, 
             "type": "DPM", 
             "url": "root://bohr3226.tier2.hep.manchester.ac.uk:1094//dpm/tier2.hep.manchester.ac.uk/home/dteam", 
-            "version": "1.12.0"
+            "version": "v5.0.3"
         }, 
         {
             "id": "UKI-LANC", 
-            "score": 19, 
+            "score": 20, 
             "type": "DPM", 
             "url": "root://fal-pygrid-30.lancs.ac.uk:1094//dpm/lancs.ac.uk/home/dteam", 
-            "version": "1.10.4"
+            "version": "v5.0.2"
         }, 
         {
             "id": "CERN-TRUNK", 
-            "score": 15, 
+            "score": 17, 
             "type": "DPM", 
             "url": "root://dpmhead-trunk.cern.ch//dpm/cern.ch/home/dteam", 
-            "version": "1.11.0"
+            "version": "v20201012-e6dffae"
         }, 
         {
             "id": "DESY-PROM", 
-            "score": 19, 
+            "score": 20, 
             "type": "dCache", 
             "url": "root://prometheus.desy.de:1095//VOs/dteam", 
-            "version": "5.2.0-SNAPSHOT"
+            "version": "dCache 7.1.0-SNAPSHOT"
         }, 
         {
             "id": "CERN-EOS", 
-            "score": 17, 
+            "score": 20, 
             "type": "EOS", 
             "url": "root://eospps.cern.ch//eos/opstest/tpc/", 
-            "version": "4.3.8"
+            "version": "v4.12.5"
         }, 
         {
             "id": "SLAC", 
             "score": 0, 
             "type": "XrootD", 
             "url": "root://griddev03.slac.stanford.edu:2094//xrootd/atlas/tpctest", 
-            "version": "5.1rc3"
+            "version": "v5.1.0"
         }, 
         {
             "id": "OU", 
-            "score": 19, 
+            "score": 20, 
             "type": "XrootD", 
             "url": "root://se1.oscer.ou.edu//xrd/dteam/doma/", 
-            "version": "4.9.1"
+            "version": "v4.12.3"
         }, 
         {
             "id": "UNI-BONN", 
-            "score": 19, 
+            "score": 20, 
             "type": "CephFS", 
             "url": "root://xrootd.physik.uni-bonn.de//cephfs/grid/dteam/", 
-            "version": "4.11.2-rc2"
+            "version": "v5.0.3"
         }, 
         {
             "id": "FNAL", 
-            "score": 19, 
+            "score": 20, 
             "type": "dCache", 
             "url": "root://stkendca06a.fnal.gov:1094//pnfs/fnal.gov/VOs/dteam", 
-            "version": "6.2.0-SNAPSHOT"
+            "version": "dCache 6.2.5"
         }, 
         {
             "id": "BRUSSELS", 
-            "score": 19, 
+            "score": 20, 
             "type": "dCache", 
             "url": "root://maite.iihe.ac.be//pnfs/iihe//dteam", 
-            "version": "4.2.18"
+            "version": "dCache 5.2.35"
         }, 
         {
             "id": "TRIUMF", 
-            "score": 19, 
+            "score": 15, 
             "type": "dCache", 
             "url": "root://pps05.lcg.triumf.ca:1094//dteam", 
-            "version": "4.2.27"
+            "version": "dCache 5.2.34"
         }, 
         {
             "id": "TRIUMF-PROD", 
-            "score": 19, 
+            "score": 20, 
             "type": "dCache", 
             "url": "root://xrootd.lcg.triumf.ca:1094//dteam", 
-            "version": "?.?.?"
+            "version": "dCache 5.2.35"
         }, 
         {
             "id": "CALTECH", 
             "score": 0, 
             "type": "HDFS", 
             "url": "root://xrootd.ultralight.org:1094//store/user/dteam/", 
-            "version": "4.9.1-1.osg34.el7"
+            "version": "v4.12.5"
         }, 
         {
             "id": "BNL", 
-            "score": 19, 
+            "score": 20, 
             "type": "dCache", 
             "url": "root://dcqos001.usatlas.bnl.gov:1096//pnfs/usatlas.bnl.gov/data/dteam/", 
-            "version": "5.2"
+            "version": "dCache 6.2.5"
         }, 
         {
             "id": "IN2P3-DOMA", 
-            "score": 8, 
+            "score": 14, 
             "type": "xrootd", 
             "url": "root://ccxrootddoma.in2p3.fr:1094//xrootd/dteam/doma/", 
-            "version": "4.11.0"
+            "version": "v4.11.2"
         }, 
         {
             "id": "AGLT2", 
-            "score": 19, 
+            "score": 20, 
             "type": "dCache", 
             "url": "root://xrootd.aglt2.org:1094//pnfs/aglt2.org/dteam", 
-            "version": "5.2.16"
+            "version": "dCache 6.2.10"
         }, 
         {
             "id": "PIC", 
-            "score": 15, 
+            "score": 20, 
             "type": "dCache", 
             "url": "root://xrootd.pic.es//pnfs/pic.es/data/dteam/tpc-test", 
-            "version": "5.2.6"
+            "version": "dCache 5.2.33"
         }, 
         {
             "id": "TOKYO-LCG2", 
-            "score": 19, 
+            "score": 20, 
             "type": "DPM", 
             "url": "root://lcg-se01.icepp.jp:1094//dpm/icepp.jp/home/dteam", 
-            "version": "1.12.1"
+            "version": "v5.0.2"
         }, 
         {
             "id": "INFN-NAPOLI", 
-            "score": 19, 
+            "score": 20, 
             "type": "DPM", 
             "url": "root://t2-dpm-01.na.infn.it:1094//dpm/na.infn.it/home/dteam", 
-            "version": "1.13.2"
+            "version": "v5.0.2"
         }, 
         {
             "id": "UCSD", 
             "score": 0, 
             "type": "Xrootd", 
             "url": "root://redirector.t2.ucsd.edu:1094//store/user/dteam/", 
-            "version": "4.11.1-1.osg34.el7"
+            "version": "v5.0.2"
         }, 
         {
             "id": "TAIWAN-LCG2", 
-            "score": 19, 
+            "score": 18, 
             "type": "DPM", 
             "url": "root://f-dpm000.grid.sinica.edu.tw//dpm/grid.sinica.edu.tw/home/dteam/", 
-            "version": "1.13.2"
+            "version": ""
         }, 
         {
             "id": "WISCONSIN", 
             "score": 0, 
             "type": "HDFS", 
             "url": "root://pubxrootd.hep.wisc.edu//osg/vo/dteam", 
-            "version": "4.10.1"
+            "version": "v4.12.3"
         }
     ], 
     "gsi-settings": {
